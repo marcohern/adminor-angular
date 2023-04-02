@@ -60,6 +60,20 @@ export class NavService {
 
   MENUITEMS: Menu[] = [
     {
+      title: 'Users',
+      selected: false,
+      icon: 'user',
+      type: 'sub',
+      Menusub: true,
+      active: false,
+      children: [
+        { title: 'Query Users', path: '/users/users', type: 'link', selected: false, },
+        { title: 'My Profile', path: '/users/me', type: 'link', selected: false, },
+        { title: 'Update Password', path: '/users/update-password', type: 'link', selected: false, },
+        { title: 'Update Email', path: '/users/update-email', type: 'link', selected: false, },
+      ]
+    },
+    {
       title: 'Dashboard',
       selected: false,
       icon: 'home',
