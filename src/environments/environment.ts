@@ -15,8 +15,8 @@ export const environment = {
   },
   prefix: 'http://localhost:8000',
   local:  {
-    clientId: '98d52d01-6448-4513-a73b-4d0703985065',
-    clientSecret: 'NrEtGC9ee0asucErb593QnCXMTQpTvWpNP3x6FPO'
+    clientId: '98d5e458-d62e-4c0f-8401-73c496ad0bc2',
+    clientSecret: '1xrLWXqDIY2ld0iGPj9cV7AA5eu8OI1B0YoVCjFF'
   }
 };
 

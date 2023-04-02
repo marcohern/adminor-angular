@@ -40,6 +40,9 @@ export class LoginPageComponent {
   }
 
   login() {
+    this.email = this.loginForm.controls['username'].value;
+    this.password = this.loginForm.controls['password'].value;
+    console.log("login",this.email, this.password);
     this.disabled = "btn-loading"
     this.clearErrorMessage();
     if (this.validateForm(this.email, this.password)) {
@@ -49,6 +52,11 @@ export class LoginPageComponent {
           console.log(token);
           this.oauthservice.authorize(token);
           this.router.navigate(['/dashboard/sales-dashboard']);
+        },
+        (error:HttpErrorResponse) => {
+          this.errorMessage = "Email/password invalid"
+          //this._error = error;
+          this.disabled = '';
         });
         /*
       this.authservice

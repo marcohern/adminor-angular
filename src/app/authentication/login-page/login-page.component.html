@@ -11,101 +11,13 @@
             <div class="row justify-content-center text-center mb-3">
               <div class="col-xl-3 col-lg-4 col-md-5 col-sm-8">
                 <div class="login-option">
-                  <ul
-                    ngbNav
-                    #nav="ngbNav"
-                    [(activeId)]="active"
-                    class="nav-tabs"  
-                  >
-                    <li ngbNavItem="Firebase" class="me-2">
-                      <a ngbNavLink>
-                        <img src="./assets/img/firebase.svg" alt="" />
-                      </a>
-                      <ng-template ngbNavContent>
-                        <form (ngSubmit)="login()">
-                          <div class="text-center title-style mb-6">
-                            <h1 class="mb-2">Firebase Login</h1>
-                            <hr />
-                            <h4>Please sign in to continue</h4>
-                          </div>
-                          <div class="input-group mb-3">
-                            <a
-                              href="javascript:void(0)"
-                              class="input-group-text bg-white text-muted"
-                            >
-                              <i
-                                class="zmdi zmdi-email text-muted"
-                                aria-hidden="true"
-                              ></i>
-                            </a>
-                            <input
-                              type="email"
-                              name="email"
-                              class="input100 border-start-0 form-control ms-0"
-                              [(ngModel)]="email"
-                              placeholder="Enter email Id"
-                              required
-                            />
-                          </div>
-                          <div class="input-group mb-4">
-                            <a
-                              href="javascript:void(0)"
-                              class="input-group-text bg-white text-muted"
-                            >
-                              <i
-                                class="zmdi zmdi-eye text-muted"
-                                aria-hidden="true"
-                                    (click)="togglePassword()"
-                              ></i>
-                            </a>
-                            <input
-                              [type]="showPassword ? 'text' : 'password'"
-                        name="password"
-                        class="input100 border-start-0 form-control ms-0"
-                        [(ngModel)]="password"
-                        placeholder="Enter Password"
-                        required
-                            />
-                          </div>
-                          <div class="col-12">
-                            <button
-                              type="submit"
-                              class="btn btn-lg btn-primary btn-block {{
-                                disabled
-                              }}"
-                            >
-                              Login
-                            </button>
-                          </div>
-                          <div class="form-group mt-2">
-                                              <p *ngIf="errorMessage.length > 0" class="text-danger">
-                                                  {{errorMessage}}</p>
-
-                                              <p *ngIf="_error.message.length > 0" class="text-danger">
-                                                  {{_error.message}} </p>
-                                              </div>
-                          <div class="main-signin-footer mt-4 mg-t-5">
-                            <p>
-                              <a routerLink="/custompages/forgot-password"
-                                >Forgot password?</a
-                              >
-                            </p>
-                            <p>
-                              Don't have an account?
-                              <a routerLink="/custompages/login"
-                                >Create an Account</a
-                              >
-                            </p>
-                          </div>
-                        </form>
-                      </ng-template>
-                    </li>
+                  <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
                     <li ngbNavItem="Angular">
                       <a ngbNavLink>
                         <img src="./favicon.ico" alt="" />
                       </a>
                       <ng-template ngbNavContent>
-                        <form [formGroup]="loginForm" (ngSubmit)="Submit()">
+                        <form [formGroup]="loginForm" (ngSubmit)="login()">
                           <div class="text-center title-style mb-3">
                             <h1 class="mb-2">Login</h1>
                             <hr />
@@ -148,13 +60,16 @@
                         formControlName="password"
                             />
                           </div>
-                         
+                          <div class="form-group mt-2">
+                            <p *ngIf="errorMessage.length > 0" class="text-danger">{{errorMessage}}</p>
+                            <p *ngIf="_error.message.length > 0" class="text-danger">{{_error.message}} </p>
+                          </div>
                           <div class="row">
                             <div class="col-12">
                               <button
                                 [disabled]="!loginForm.valid"
                                 type="submit"
-                                class="btn btn-lg btn-primary btn-block"
+                                class="btn btn-lg btn-primary btn-block {{disabled}}"
                               >
                                 Login
                               </button>
