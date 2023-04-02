@@ -40,7 +40,7 @@ export class LoginPageComponent {
   }
 
   login() {
-    // this.disabled = "btn-loading"
+    this.disabled = "btn-loading"
     this.clearErrorMessage();
     if (this.validateForm(this.email, this.password)) {
       this.oauthservice
