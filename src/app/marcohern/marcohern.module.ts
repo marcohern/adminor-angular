@@ -7,6 +7,7 @@ import { UpdateEmailComponent } from './users/update-email/update-email.componen
 import { MarcohernRoutingModule } from './marcohern-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 
 
@@ -22,6 +23,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule,
     SharedModule,
+    NgSelectModule,
     MarcohernRoutingModule,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

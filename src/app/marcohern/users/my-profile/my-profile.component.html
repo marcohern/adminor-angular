@@ -3,4 +3,38 @@
   [items]="['Users']"
   [active_item]="'My Profile'"
 ></app-page-header>
-<p>my-profile works!</p>
+<div class="row">
+  <div class="col-lg-6 col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">Single Select Style</div>
+        <p class="text-muted card-sub-title mb-0">
+          First import a latest version of jquery in your page. Then the
+          jquery.sumoselect.min.js and its css (sumoselect.css)
+        </p>
+      </div>
+      <div class="card-body">
+        <div class="mb-4">
+          <p class="mg-b-10">Single Select</p>
+          <ng-select [items]="toppingList" [(ngModel)]="toppings">
+              </ng-select>
+        </div>
+        <div class="mb-4">
+           <p class="mg-b-10">Disable Select</p>
+		 <ng-select [items]="toppingList" [(ngModel)]="toppings" disabled="true">
+              </ng-select>
+        </div>
+        <div>
+          <p class="mg-b-10"> Type to Add Multiple items </p>
+            <ng-select
+                class="multi-select"
+                [items]="[]"
+                [addTag]="true"
+                disabled="disabled"
+              >
+              </ng-select>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
