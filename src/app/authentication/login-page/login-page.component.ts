@@ -49,9 +49,6 @@ export class LoginPageComponent {
           console.log(token);
           this.oauthservice.authorize(token);
           this.router.navigate(['/dashboard/sales-dashboard']);
-        },
-        (error:HttpErrorResponse) => {
-          console.error(error);
         });
         /*
       this.authservice
