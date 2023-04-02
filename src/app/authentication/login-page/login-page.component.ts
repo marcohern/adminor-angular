@@ -1,8 +1,10 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Token } from 'src/app/shared/models/token';
 import { AuthService } from 'src/app/shared/services/auth.service';
-
+import { OauthService } from 'src/app/shared/services/oauth.service';
 @Component({
   selector: 'app-login-page',
   templateUrl: './login-page.component.html',
@@ -14,20 +16,21 @@ export class LoginPageComponent {
   active: any;
   constructor(
     private authservice: AuthService,
+    private oauthservice: OauthService,
     private router: Router,
     private formBuilder: FormBuilder
   ) {}
 
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
-      username: ['spruko@admin.com', [Validators.required, Validators.email]],
-      password: ['sprukoadmin', Validators.required],
+      username: ['', [Validators.required, Validators.email]],
+      password: ['', Validators.required],
     });
   }
 
   // firebase
-  email = 'spruko@admin.com';
-  password = 'sprukoadmin';
+  email = '';
+  password = '';
   errorMessage = ''; // validation _error handle
   _error: { name: string; message: string } = { name: '', message: '' }; // for firbase _error handle
 
@@ -40,6 +43,17 @@ export class LoginPageComponent {
     // this.disabled = "btn-loading"
     this.clearErrorMessage();
     if (this.validateForm(this.email, this.password)) {
+      this.oauthservice
+        .login(this.email, this.password)
+        .subscribe((token:Token) => {
+          console.log(token);
+          this.oauthservice.authorize(token);
+          this.router.navigate(['/dashboard/sales-dashboard']);
+        },
+        (error:HttpErrorResponse) => {
+          console.error(error);
+        });
+        /*
       this.authservice
         .loginWithEmail(this.email, this.password)
         .then(() => {
@@ -50,6 +64,7 @@ export class LoginPageComponent {
           this._error = _error;
           this.router.navigate(['/']);
         });
+        */
     }
   }
 
