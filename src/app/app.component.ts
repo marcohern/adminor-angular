@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { OauthService } from './shared/services/oauth.service';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,12 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Adminor';
 
+  constructor(
+    private oauth:OauthService
+  )
+  { }
+
   ngOnInit() {
-    
+    this.oauth.init();
   }
 }

@@ -22,7 +22,7 @@ export class SidebarComponent {
     private navServices: NavService,
     public elRef: ElementRef,
     private breakpointObserver: BreakpointObserver,
-    private oauth:OauthService,
+    public oauth:OauthService,
   ) {
     this.checkNavActiveOnLoad();
     this.user = oauth.currentUser;

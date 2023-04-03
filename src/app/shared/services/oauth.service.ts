@@ -6,6 +6,7 @@ import { environment } from 'src/environments/environment';
 import { Token } from '../models/token';
 import { PasswordGrand } from '../models/password-grand';
 import { User } from '../models/user';
+import { StoreService } from './store.service';
 
 @Injectable({
   providedIn: 'root'
@@ -16,10 +17,11 @@ export class OauthService {
 
   };
   constructor(
-    private http: HttpClient
+    private http: HttpClient,
+    private store: StoreService
   ) { }
 
-  private authorization?:string = undefined;
+  private authorization?:Token = undefined;
   private user?:User = undefined;
 
   public get currentUser() {
@@ -42,7 +44,7 @@ export class OauthService {
     h = {};
     h["Accept"] = "application/json";
     if (this.authorization !== undefined) {
-      h["Authorization"] = `Bearer ${this.authorization}`;
+      h["Authorization"] = `Bearer ${this.authorization.access_token}`;
     }
     return h;
   }
@@ -65,11 +67,25 @@ export class OauthService {
   }
 
   authorize(token:Token) {
-    this.authorization = token.access_token;
+    this.authorization = token;
+    this.store.set('token',this.authorization);
   }
 
   setUser(user:User) {
     this.user = user;
+  }
+
+  init() {
+    console.log("oauth.init");
+    var token:Token = this.store.get('token');
+    if (token !== null) {
+      this.authorize(token);
+      console.log(token);
+      this.getUser().subscribe((user:User) => {
+        this.setUser(user);
+        console.log(user);
+      });
+    }
   }
 
   unauthorize() {
