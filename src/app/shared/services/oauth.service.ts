@@ -27,6 +27,9 @@ export class OauthService {
   public get currentUser() {
     return this.user;
   }
+  public set currentUser(value) {
+    this.user = value;
+  }
 
   private grant(email:string, password:string): PasswordGrand {
     return {

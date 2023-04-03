@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { User } from 'src/app/shared/models/user';
 import { OauthService } from 'src/app/shared/services/oauth.service';
 
 @Component({
@@ -9,19 +10,23 @@ import { OauthService } from 'src/app/shared/services/oauth.service';
 })
 export class MyProfileComponent {
 
-  public disabled = 'btn-loading';
-  public name:FormControl = new FormControl('');
+  public disabled:string = '';//'btn-loading';
+  public name:string = '';
 
-  constructor(private oauth:OauthService) {
+  constructor(public oauth:OauthService) {
 
   }
 
   ngOnInit() {
-    console.log("init", this.oauth.currentUser?.name);
-    this.name.setValue(this.oauth.currentUser?.name);
+    var user = this.oauth.currentUser;
+    if (user !== undefined)
+    {
+      this.name = user.name;
+      console.log("init", this.name);
+    }
   }
 
   save() {
-    console.log(this.name.value);
+    console.log(this.name);
   }
 }
