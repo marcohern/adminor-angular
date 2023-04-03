@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Token } from 'src/app/shared/models/token';
+import { User } from 'src/app/shared/models/user';
 import { AuthService } from 'src/app/shared/services/auth.service';
 import { OauthService } from 'src/app/shared/services/oauth.service';
 @Component({
@@ -43,7 +44,7 @@ export class LoginPageComponent {
     this.email = this.loginForm.controls['username'].value;
     this.password = this.loginForm.controls['password'].value;
     console.log("login",this.email, this.password);
-    this.disabled = "btn-loading"
+    this.disabled = "btn-loading";
     this.clearErrorMessage();
     if (this.validateForm(this.email, this.password)) {
       this.oauthservice
@@ -51,7 +52,12 @@ export class LoginPageComponent {
         .subscribe((token:Token) => {
           console.log(token);
           this.oauthservice.authorize(token);
-          this.router.navigate(['/dashboard/sales-dashboard']);
+          this.oauthservice.getUser()
+            .subscribe((user:User) => {
+              console.log(user);
+              this.oauthservice.setUser(user);
+              this.router.navigate(['/dashboard/sales-dashboard']);
+            });
         },
         (error:HttpErrorResponse) => {
           this.errorMessage = "Email/password invalid"

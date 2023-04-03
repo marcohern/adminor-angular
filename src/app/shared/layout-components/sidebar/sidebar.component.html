@@ -33,10 +33,9 @@
                 />
               </div>
               <div class="user-info mb-4">
-                <h6 class="mb-0 text-dark">Joyice Stewar</h6>
-                <span class="text-muted app-sidebar__user-name text-sm"
-                  >Web-Disigner</span
-                >
+                <h6 class="mb-0 text-dark" *ngIf="user">{{user.name}}</h6>
+                <h6 class="mb-0 text-dark" *ngIf="!user">Not Logged In</h6>
+                <span class="text-muted app-sidebar__user-name text-sm" *ngIf="user">{{user.role}}</span>
               </div>
             </div>
           </div>

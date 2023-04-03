@@ -5,6 +5,7 @@ import { catchError, retry } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { Token } from '../models/token';
 import { PasswordGrand } from '../models/password-grand';
+import { User } from '../models/user';
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +20,11 @@ export class OauthService {
   ) { }
 
   private authorization?:string = undefined;
+  private user?:User = undefined;
+
+  public get currentUser() {
+    return this.user;
+  }
 
   private grant(email:string, password:string): PasswordGrand {
     return {
@@ -31,10 +37,14 @@ export class OauthService {
     }
   }
 
-  get headers() {
-    return {
-      "Accept": "application/json"
+  public get headers() {
+    var h: {[key:string]:string};
+    h = {};
+    h["Accept"] = "application/json";
+    if (this.authorization !== undefined) {
+      h["Authorization"] = `Bearer ${this.authorization}`;
     }
+    return h;
   }
 
   login(email:string, password:string)
@@ -46,11 +56,24 @@ export class OauthService {
     );
   }
 
+  getUser()
+  {
+    return this.http.get<User>(
+      `${environment.prefix}/api/user`,
+      { headers:this.headers }
+    );
+  }
+
   authorize(token:Token) {
-    this.authorization = `Bearer ${token.access_token}`;
+    this.authorization = token.access_token;
+  }
+
+  setUser(user:User) {
+    this.user = user;
   }
 
   unauthorize() {
     this.authorization = undefined;
+    this.user = undefined;
   }
 }

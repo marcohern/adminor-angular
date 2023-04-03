@@ -4,6 +4,8 @@ import { NavigationEnd, NavigationStart, Router } from '@angular/router';
 import { fromEvent } from 'rxjs';
 import { Menu, NavService } from '../../services/nav.service';
 import { checkHoriMenu, switcherArrowFn } from './sidebar';
+import { OauthService } from '../../services/oauth.service';
+import { User } from '../../models/user';
 
 @Component({
   selector: 'app-sidebar',
@@ -14,13 +16,16 @@ export class SidebarComponent {
   public menuItems!: Menu[];
   public url: any;
   public windowSubscribe$!: any;
+  public user?:User = undefined;
   constructor(
     private router: Router,
     private navServices: NavService,
     public elRef: ElementRef,
-    private breakpointObserver: BreakpointObserver
+    private breakpointObserver: BreakpointObserver,
+    private oauth:OauthService,
   ) {
     this.checkNavActiveOnLoad();
+    this.user = oauth.currentUser;
   }
   // To set Active on Load
   checkNavActiveOnLoad() {

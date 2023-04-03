@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { OauthService } from 'src/app/shared/services/oauth.service';
 
 @Component({
   selector: 'app-my-profile',
@@ -7,22 +8,20 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
   styleUrls: ['./my-profile.component.scss']
 })
 export class MyProfileComponent {
-  toppings = new FormControl('select all');
-  toppingList: string[] = [
-    'Extra cheese',
-    'Mushroom',
-    'Onion',
-    'Pepperoni',
-    'Sausage',
-    'Tomato',
-  ];
 
-  constructor(private fb: FormBuilder) {
+  public disabled = 'btn-loading';
+  public name:FormControl = new FormControl('');
+
+  constructor(private oauth:OauthService) {
 
   }
 
-  ngOnInit()
-  {
+  ngOnInit() {
+    console.log("init", this.oauth.currentUser?.name);
+    this.name.setValue(this.oauth.currentUser?.name);
+  }
 
+  save() {
+    console.log(this.name.value);
   }
 }
