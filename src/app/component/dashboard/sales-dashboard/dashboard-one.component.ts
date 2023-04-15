@@ -1,5 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import * as chartData from 'src/app/shared/data/dashboard';
+import * as chartData from 'src/app/marcohern/shared/data/sales-report';
 
 
 @Component({
@@ -8,11 +8,8 @@ import * as chartData from 'src/app/shared/data/dashboard';
   styleUrls: ['./dashboard-one.component.scss'],
 })
 export class DashboardOneComponent {
-  @ViewChild('Canvas') Canvas: ElementRef | any;
-  @ViewChild('myCanvas') myCanvas: ElementRef | any;
-  
   //Area Chart
-  public AreaChartOptions = chartData.AreaChartOptions;
-  public AreaChartType = chartData.AreaChartType;
-  public AreaChartData = chartData.AreaChartData;
+  public AreaChartOptions = chartData.options;
+  public AreaChartType = chartData.type;
+  public AreaChartData = chartData.data;
 }

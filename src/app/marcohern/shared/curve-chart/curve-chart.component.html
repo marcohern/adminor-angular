@@ -3,8 +3,7 @@
     <div class="d-flex justify-content-between">
       <h4 class="card-title mg-b-10">{{title}}</h4>
       <div class="dropdown" ngbDropdown>
-        <a ngbDropdownToggle ngb href="javascript:void(0);"
-          aria-expanded="false" aria-haspopup="true"
+        <a ngbDropdownToggle ngb href="javascript:void(0);" aria-expanded="false" aria-haspopup="true"
           class="px-2 py-1 rounded-1 tx-medium tx-12 bg-primary-gradient text-white"
           data-bs-toggle="dropdown" id="dropdownMenuButton">
           Yearly
@@ -13,12 +12,13 @@
         <div ngbDropdownMenu class="dropdown-menu tx-13">
           <a ngbDropdownItem class="dropdown-item" href="javascript:void(0);">Daily</a>
           <a ngbDropdownItem class="dropdown-item" href="javascript:void(0);">Monthly</a>
+          <a ngbDropdownItem class="dropdown-item" href="javascript:void(0);">Yearly</a>
         </div>
       </div>
     </div>
     <p class="tx-13 text-muted mb-2">
-      {{subtitle}}
-      <a href="javascript:void(0)">Learn more</a>
+      {{description}}
+      <a href="{{descLinkUrl}}">{{descLinkText}}</a>
     </p>
   </div>
   <div class="card-body pd-y-7">

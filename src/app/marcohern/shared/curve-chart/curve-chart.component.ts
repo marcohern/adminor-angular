@@ -13,5 +13,7 @@ export class CurveChartComponent {
   @Input() public type:any;
   @Input() public data:any;
   @Input() public title:string = '*Title*';
-  @Input() public subtitle:string = '';
+  @Input() public description:string = '';
+  @Input() public descLinkUrl:string = 'javascript:void(0)';
+  @Input() public descLinkText:string = 'Learn More';
 }
