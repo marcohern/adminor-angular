@@ -6,13 +6,13 @@
         <a ngbDropdownToggle ngb href="javascript:void(0);" aria-expanded="false" aria-haspopup="true"
           class="px-2 py-1 rounded-1 tx-medium tx-12 bg-primary-gradient text-white"
           data-bs-toggle="dropdown" id="dropdownMenuButton">
-          Yearly
+          {{selected}}
           <i class="fe fe-chevron-down mx-1"></i>
         </a>
-        <div ngbDropdownMenu class="dropdown-menu tx-13">
-          <a ngbDropdownItem class="dropdown-item" href="javascript:void(0);">Daily</a>
-          <a ngbDropdownItem class="dropdown-item" href="javascript:void(0);">Monthly</a>
-          <a ngbDropdownItem class="dropdown-item" href="javascript:void(0);">Yearly</a>
+        <div ngbDropdownMenu aria-labelledby="dropdownMenuButton" class="dropdown-menu tx-13">
+          <a ngbDropdownItem class="dropdown-item" (click)="select('daily')">Daily</a>
+          <a ngbDropdownItem class="dropdown-item" (click)="select('monthly')">Monthly</a>
+          <a ngbDropdownItem class="dropdown-item" (click)="select('yearly')">Yearly</a>
         </div>
       </div>
     </div>
@@ -23,7 +23,7 @@
   </div>
   <div class="card-body pd-y-7">
     <div id="project-budget">
-      <canvas baseChart height="330" [data]="data" [options]="options" [type]="type"></canvas>
+      <canvas baseChart height="330px" [data]="data" [options]="options" [type]="type"></canvas>
     </div>
   </div>
 </div>

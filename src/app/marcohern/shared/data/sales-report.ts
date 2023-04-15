@@ -22,7 +22,7 @@ export let options: ChartConfiguration['options'] = {
   },
 };
 
-export let data: ChartConfiguration['data'] = {
+export let yearly: ChartConfiguration['data'] = {
   datasets: [
     {
       label: 'Amount Used(Mins)',
@@ -43,5 +43,58 @@ export let data: ChartConfiguration['data'] = {
       fill: 'origin',
     },
   ],
-  labels: [ 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'July ', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec' ],
+  labels: [ '2021', '2022', '2023', '2024', '2025', '2026', '2027', '2028', '2029', '2030', '2031', '2032' ],
+};
+export let monthly: ChartConfiguration['data'] = {
+  datasets: [
+    {
+      label: 'Amount Used(Mins)',
+      data: [0.12, 0.19, 0.18, 0.24, 0.15, 0.25, 0.28, 0.20, 0.31, 0.11, 0.25, 0.22],
+      borderColor: ' rgb(98, 58, 162,0.5 )',
+      borderWidth: 4,
+      backgroundColor: ' rgb(98, 58, 162,0.3 )',
+      tension: 0.5,
+      fill: 'origin',
+    },
+    {
+      label: 'Total Budgets Per Session',
+      data: [0.18, 0.21, 0.19, 0.23, 0.24, 0.29, 0.14, 0.11, 0.29, 0.10, 0.28, 0.13],
+      borderColor: 'rgba(246, 107, 78, 0.5)',
+      borderWidth: 4,
+      backgroundColor: 'rgba(246, 107, 78, 0.3)',
+      tension: 0.5,
+      fill: 'origin',
+    },
+  ],
+  labels: [ 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec' ],
+};
+export let daily: ChartConfiguration['data'] = {
+  datasets: [
+    {
+      label: 'Amount Used(Mins)',
+      data: [0.15, 0.25, 0.28, 0.20, 0.31, 0.11, 0.25, 0.22, 0.12, 0.19, 0.18, 0.24],
+      borderColor: ' rgb(98, 58, 162,0.5 )',
+      borderWidth: 4,
+      backgroundColor: ' rgb(98, 58, 162,0.3 )',
+      tension: 0.5,
+      fill: 'origin',
+    },
+    {
+      label: 'Total Budgets Per Session',
+      data: [0.23, 0.24, 0.29, 0.14, 0.11, 0.29, 0.10, 0.28, 0.13, 0.18, 0.21, 0.19],
+      borderColor: 'rgba(246, 107, 78, 0.5)',
+      borderWidth: 4,
+      backgroundColor: 'rgba(246, 107, 78, 0.3)',
+      tension: 0.5,
+      fill: 'origin',
+    },
+  ],
+  labels: [ '1', '2', '3', '4', '5', '6', '7 ', '8', '9', '10', '11', '12' ],
+};
+
+
+export let period:any = {
+  daily  : { id: "daily"  , label: "Daily"  , data: daily   },
+  monthly: { id: "monthly", label: "Monthly", data: monthly },
+  yearly : { id: "yearly" , label: "Yearly" , data: yearly  },
 };
