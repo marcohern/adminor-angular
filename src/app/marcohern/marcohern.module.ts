@@ -7,8 +7,13 @@ import { UpdateEmailComponent } from './users/update-email/update-email.componen
 import { MarcohernRoutingModule } from './marcohern-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgChartsModule } from 'ng2-charts';
+import { NgChartjsModule } from 'ng-chartjs';
+import { NgxEchartsModule } from 'ngx-echarts';
+import { NgApexchartsModule } from 'ng-apexcharts';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { CounterComponent } from './shared/counter/counter.component';
+import { CurveChartComponent } from './shared/curve-chart/curve-chart.component';
 
 
 
@@ -18,7 +23,8 @@ import { CounterComponent } from './shared/counter/counter.component';
     MyProfileComponent,
     UpdatePasswordComponent,
     UpdateEmailComponent,
-    CounterComponent
+    CounterComponent,
+    CurveChartComponent
   ],
   imports: [
     CommonModule,
@@ -27,10 +33,15 @@ import { CounterComponent } from './shared/counter/counter.component';
     SharedModule,
     NgSelectModule,
     MarcohernRoutingModule,
+    NgChartjsModule,
+    NgChartsModule,
+    NgxEchartsModule,
+    NgApexchartsModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   exports:[
-    CounterComponent
+    CounterComponent,
+    CurveChartComponent
   ],
 })
 export class MarcohernModule { }
