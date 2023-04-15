@@ -21,6 +21,29 @@ export let options: ChartConfiguration['options'] = {
     legend: { labels: { color: '#77778e', }, },
   },
 };
+export let def: ChartConfiguration['data'] = {
+  datasets: [
+    {
+      label: 'Amount Used(Mins)',
+      data: [0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65],
+      borderColor: ' rgb(98, 58, 162,0.5 )',
+      borderWidth: 4,
+      backgroundColor: ' rgb(98, 58, 162,0.3 )',
+      tension: 0.5,
+      fill: 'origin',
+    },
+    {
+      label: 'Total Budgets Per Session',
+      data: [0.35, 0.36, 0.37, 0.38, 0.39, 0.4, 0.41, 0.42, 0.43, 0.44, 0.45, 0.46],
+      borderColor: 'rgba(246, 107, 78, 0.5)',
+      borderWidth: 4,
+      backgroundColor: 'rgba(246, 107, 78, 0.3)',
+      tension: 0.5,
+      fill: 'origin',
+    },
+  ],
+  labels: [ '2021', '2022', '2023', '2024', '2025', '2026', '2027', '2028', '2029', '2030', '2031', '2032' ],
+};
 
 export let yearly: ChartConfiguration['data'] = {
   datasets: [

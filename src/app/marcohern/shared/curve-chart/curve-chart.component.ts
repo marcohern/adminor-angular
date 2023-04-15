@@ -1,5 +1,5 @@
 import { Component, ElementRef, Input, ViewChild } from '@angular/core';
-import { period, yearly, monthly, daily, options } from '../data/sales-report';
+import { period, options, def } from '../data/sales-report';
 
 
 @Component({
@@ -13,13 +13,13 @@ export class CurveChartComponent {
 
   @Input() public options:any = options;
   @Input() public type:any = 'line';
-  @Input() public data:any = [];
+  @Input() public data:any = def;
   @Input() public title:string = '*Title*';
   @Input() public description:string = '';
   @Input() public descLinkUrl:string = 'javascript:void(0)';
   @Input() public descLinkText:string = 'Learn More';
 
-  public selected:string = '';
+  public selected:string = '- select -';
 
   select(id:string) {
     var p = period[id];
@@ -27,7 +27,4 @@ export class CurveChartComponent {
     this.data = p.data;
   }
 
-  ngOnInit() {
-    this.select('daily')
-  }
 }
