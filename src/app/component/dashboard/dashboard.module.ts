@@ -16,6 +16,7 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CountriesMapModule } from 'countries-map';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MarcohernModule } from 'src/app/marcohern/marcohern.module';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     NgxEchartsModule,
     NgApexchartsModule,
     CountriesMapModule,
+    MarcohernModule,
     NgCircleProgressModule.forRoot(),
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

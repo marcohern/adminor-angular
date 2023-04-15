@@ -8,6 +8,7 @@ import { MarcohernRoutingModule } from './marcohern-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgSelectModule } from '@ng-select/ng-select';
+import { CounterComponent } from './shared/counter/counter.component';
 
 
 
@@ -16,7 +17,8 @@ import { NgSelectModule } from '@ng-select/ng-select';
     QueryUsersComponent,
     MyProfileComponent,
     UpdatePasswordComponent,
-    UpdateEmailComponent
+    UpdateEmailComponent,
+    CounterComponent
   ],
   imports: [
     CommonModule,
@@ -27,5 +29,8 @@ import { NgSelectModule } from '@ng-select/ng-select';
     MarcohernRoutingModule,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  exports:[
+    CounterComponent
+  ],
 })
 export class MarcohernModule { }
