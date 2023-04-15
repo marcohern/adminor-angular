@@ -12,4 +12,6 @@ export class CurveChartComponent {
   @Input() public options:any;
   @Input() public type:any;
   @Input() public data:any;
+  @Input() public title:string = '*Title*';
+  @Input() public subtitle:string = '';
 }
