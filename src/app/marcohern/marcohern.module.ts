@@ -4,9 +4,6 @@ import { MarcohernRoutingModule } from './marcohern-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgChartsModule } from 'ng2-charts';
-import { NgChartjsModule } from 'ng-chartjs';
-import { NgxEchartsModule } from 'ngx-echarts';
-import { NgApexchartsModule } from 'ng-apexcharts';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -49,10 +46,7 @@ import { WeatherComponent } from './shared/weather/weather.component';
     SharedModule,
     NgSelectModule,
     MarcohernRoutingModule,
-    NgChartjsModule,
     NgChartsModule,
-    NgxEchartsModule,
-    NgApexchartsModule,
     NgbModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
