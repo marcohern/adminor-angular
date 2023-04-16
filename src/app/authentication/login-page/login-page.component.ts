@@ -23,6 +23,9 @@ export class LoginPageComponent {
   ) {}
 
   ngOnInit(): void {
+    if (this.oauthservice.isAuthorized()) {
+      this.router.navigate(['/dashboard/sales-dashboard'])
+    }
     this.loginForm = this.formBuilder.group({
       username: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required],

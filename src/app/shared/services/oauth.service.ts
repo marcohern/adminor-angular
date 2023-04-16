@@ -95,4 +95,9 @@ export class OauthService {
     this.authorization = undefined;
     this.user = undefined;
   }
+
+  isAuthorized():boolean {
+    if (this.authorization === undefined) return false;
+    return true;
+  }
 }

@@ -5,6 +5,7 @@ import { DashboardFourComponent } from './lms-dashboard/dashboard-four.component
 import { DashboardOneComponent } from './sales-dashboard/dashboard-one.component';
 import { DashboardThreeComponent } from './app-dashboard/dashboard-three.component';
 import { DashboardTwoComponent } from './marketing-dashboard/dashboard-two.component';
+import { AuthGuard } from 'src/app/marcohern/guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -13,6 +14,7 @@ const routes: Routes = [
       {
         path: 'sales-dashboard',
         title: 'Adminor - sales-dashboard',
+        canActivate:[AuthGuard],
         component: DashboardOneComponent,
       },
       {
