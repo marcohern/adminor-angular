@@ -14,7 +14,7 @@ import { CurveChartComponent } from './shared/curve-chart/curve-chart.component'
 import { InvoicesComponent } from './shared/invoices/invoices.component';
 import { MyProfileComponent } from './users/my-profile/my-profile.component';
 import { QueryUsersComponent } from './users/query-users/query-users.component';
-import { SalesSummaryComponent } from './shared/sales-summary/sales-summary.component';
+import { SalesSummaryComponent } from './shared/sales/sales-summary/sales-summary.component';
 import { TasksAssignedComponent } from './shared/tasks-assigned/tasks-assigned.component';
 import { TasksComponent } from './shared/tasks/tasks.component';
 import { TransactionsComponent } from './shared/transactions/transactions.component';
