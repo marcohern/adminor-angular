@@ -2,7 +2,6 @@ import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { NgChartjsModule } from 'ng-chartjs';
-import { NgChartsModule } from 'ng2-charts';
 import { NgxEchartsModule } from 'ngx-echarts';
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { NgCircleProgressModule } from 'ng-circle-progress';
@@ -36,7 +35,6 @@ import { DashboardFiveComponent } from './analytics-dashboard/dashboard-five.com
     NgApexchartsModule,
     NgbModule,
     NgChartjsModule,
-    NgChartsModule,
     NgxEchartsModule,
     ReactiveFormsModule,
     SharedModule,
