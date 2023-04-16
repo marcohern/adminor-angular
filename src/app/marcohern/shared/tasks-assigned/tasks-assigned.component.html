@@ -1,0 +1,24 @@
+<div class="card">
+  <div class="card-header border-bottom">
+    <h5 class="card-title">{{title}}</h5>
+  </div>
+  <div class="card-body p-0">
+    <div *ngFor="let task of tasks" class="clearfix border-bottom p-3">
+      <div class="col mb-0">
+        <div class="d-flex flex-wrap">
+          <div class="main-img-user avatar avatar-md">
+            <img alt="avatar" class="rounded-circle" src="./assets/img/users/2.jpg" />
+          </div>
+          <div class="float-start mt-2 ms-2">
+            <h5 class="tx-15 mb-0">{{task.who}}</h5>
+            <p class="mb-0 text-muted">{{task.what}}</p>
+          </div>
+          <div class="ms-auto mt-2">
+            <h6 class="tx-15 mb-0">{{task.name}}</h6>
+            <small class="text-muted">{{task.turnout}}</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

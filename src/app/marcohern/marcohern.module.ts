@@ -18,6 +18,7 @@ import { CounterComponent } from './shared/counter/counter.component';
 import { CurveChartComponent } from './shared/curve-chart/curve-chart.component';
 import { TasksComponent } from './shared/tasks/tasks.component';
 import { SalesSummaryComponent } from './shared/sales-summary/sales-summary.component';
+import { TasksAssignedComponent } from './shared/tasks-assigned/tasks-assigned.component';
 
 
 
@@ -30,7 +31,8 @@ import { SalesSummaryComponent } from './shared/sales-summary/sales-summary.comp
     CounterComponent,
     CurveChartComponent,
     TasksComponent,
-    SalesSummaryComponent
+    SalesSummaryComponent,
+    TasksAssignedComponent
   ],
   imports: [
     CommonModule,
@@ -50,7 +52,8 @@ import { SalesSummaryComponent } from './shared/sales-summary/sales-summary.comp
     CounterComponent,
     CurveChartComponent,
     TasksComponent,
-    SalesSummaryComponent
+    SalesSummaryComponent,
+    TasksAssignedComponent
   ],
 })
 export class MarcohernModule { }
