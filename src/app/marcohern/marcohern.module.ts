@@ -10,7 +10,6 @@ import { NgApexchartsModule } from 'ng-apexcharts';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
-import { CounterComponent } from './shared/counters/counter/counter.component';
 import { CurveChartComponent } from './shared/curve-chart/curve-chart.component';
 import { InvoicesComponent } from './shared/invoices/invoices.component';
 import { MyProfileComponent } from './users/my-profile/my-profile.component';
@@ -32,7 +31,6 @@ import { Counter1Component } from './shared/counters/counter1/counter1.component
     MyProfileComponent,
     UpdatePasswordComponent,
     UpdateEmailComponent,
-    CounterComponent,
     Counter1Component,
     CurveChartComponent,
     TasksComponent,
@@ -57,7 +55,6 @@ import { Counter1Component } from './shared/counters/counter1/counter1.component
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   exports:[
-    CounterComponent,
     Counter1Component,
     CurveChartComponent,
     TasksComponent,
