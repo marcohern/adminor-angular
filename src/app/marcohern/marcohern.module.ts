@@ -10,6 +10,8 @@ import { NgApexchartsModule } from 'ng-apexcharts';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+import { Counter1Component } from './shared/counters/counter1/counter1.component';
+import { Counter2Component } from './shared/counters/counter2/counter2.component';
 import { CurveChartComponent } from './shared/curve-chart/curve-chart.component';
 import { InvoicesComponent } from './shared/invoices/invoices.component';
 import { MyProfileComponent } from './users/my-profile/my-profile.component';
@@ -21,24 +23,24 @@ import { TransactionsComponent } from './shared/transactions/transactions.compon
 import { UpdatePasswordComponent } from './users/update-password/update-password.component';
 import { UpdateEmailComponent } from './users/update-email/update-email.component';
 import { WeatherComponent } from './shared/weather/weather.component';
-import { Counter1Component } from './shared/counters/counter1/counter1.component';
 
 
 
 @NgModule({
   declarations: [
-    QueryUsersComponent,
-    MyProfileComponent,
-    UpdatePasswordComponent,
-    UpdateEmailComponent,
-    Counter1Component,
     CurveChartComponent,
-    TasksComponent,
+    Counter1Component,
+    Counter2Component,
+    InvoicesComponent,
+    MyProfileComponent,
+    QueryUsersComponent,
     SalesSummaryComponent,
     TasksAssignedComponent,
+    TasksComponent,
     TransactionsComponent,
-    WeatherComponent,
-    InvoicesComponent
+    UpdatePasswordComponent,
+    UpdateEmailComponent,
+    WeatherComponent
   ],
   imports: [
     CommonModule,
@@ -56,6 +58,7 @@ import { Counter1Component } from './shared/counters/counter1/counter1.component
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   exports:[
     Counter1Component,
+    Counter2Component,
     CurveChartComponent,
     TasksComponent,
     SalesSummaryComponent,

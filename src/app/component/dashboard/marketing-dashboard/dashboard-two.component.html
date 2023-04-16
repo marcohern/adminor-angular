@@ -10,66 +10,16 @@
     <div class="col-lg-12">
       <div class="row">
         <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
-          <div class="card">
-            <div class="card-body">
-              <div class="float-end bg-primary shadow-primary stamp stamp-lg">
-                <i class="bx bx-user tx-24"></i>
-              </div>
-              <div class="text-muted"><h5>Total Projects</h5></div>
-              <span class="mb-1 tx-26 font-weight-semibold">6835</span>
-              <span
-                class="ms-2 badge rounded-pill bg-success-transparent tx-success fs-10"
-                >This month</span
-              >
-            </div>
-          </div>
+          <marcohern-counter2 title="Total Projects" [amount]="1735"></marcohern-counter2>
         </div>
         <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
-          <div class="card">
-            <div class="card-body">
-              <div
-                class="float-end stamp stamp-lg bg-secondary shadow-secondary"
-              >
-                <i class="bx bx-cart tx-24"></i>
-              </div>
-              <div class="text-muted"><h5>On Going</h5></div>
-              <span class="mb-1 tx-26 font-weight-semibold">6735</span>
-              <span
-                class="ms-2 badge rounded-pill bg-success-transparent tx-success fs-10"
-                >This month</span
-              >
-            </div>
-          </div>
+          <marcohern-counter2 title="On Going" [amount]="4735" bg="bg-secondary shadow-secondary"></marcohern-counter2>
         </div>
         <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
-          <div class="card">
-            <div class="card-body">
-              <div class="float-end bg-success shadow-success stamp stamp-lg">
-                <i class="bx bx-briefcase tx-24"></i>
-              </div>
-              <div class="text-muted"><h5>Upcoming</h5></div>
-              <span class="mb-1 tx-26 font-weight-semibold">4835</span>
-              <span
-                class="ms-2 badge rounded-pill bg-danger-transparent tx-danger fs-10"
-                >Next month</span
-              >
-            </div>
-          </div>
+          <marcohern-counter2 title="Upcoming" [amount]="4835" bg="bg-success shadow-success" status="bg-danger-transparent tx-danger"></marcohern-counter2>
         </div>
         <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
-          <div class="card">
-            <div class="card-body">
-              <div class="float-end stamp stamp-lg bg-info shadow-info">
-                <i class="bx bx-money tx-24"></i>
-              </div>
-              <div class="text-muted"><h5>On Hold</h5></div>
-              <span class="mb-1 tx-26 font-weight-semibold">7335</span>
-              <span
-                class="ms-2 badge rounded-pill bg-success-transparent tx-success fs-10"
-                >This month</span
-              >
-            </div>
-          </div>
+          <marcohern-counter2 title="On Hold" [amount]="7335" bg="bg-info shadow-info"></marcohern-counter2>
         </div>
       </div>
     </div>
