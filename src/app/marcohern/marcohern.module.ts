@@ -21,6 +21,7 @@ import { SalesSummaryComponent } from './shared/sales-summary/sales-summary.comp
 import { TasksAssignedComponent } from './shared/tasks-assigned/tasks-assigned.component';
 import { TransactionsComponent } from './shared/transactions/transactions.component';
 import { WeatherComponent } from './shared/weather/weather.component';
+import { InvoicesComponent } from './shared/invoices/invoices.component';
 
 
 
@@ -36,7 +37,8 @@ import { WeatherComponent } from './shared/weather/weather.component';
     SalesSummaryComponent,
     TasksAssignedComponent,
     TransactionsComponent,
-    WeatherComponent
+    WeatherComponent,
+    InvoicesComponent
   ],
   imports: [
     CommonModule,
@@ -59,7 +61,8 @@ import { WeatherComponent } from './shared/weather/weather.component';
     SalesSummaryComponent,
     TasksAssignedComponent,
     TransactionsComponent,
-    WeatherComponent
+    WeatherComponent,
+    InvoicesComponent
   ],
 })
 export class MarcohernModule { }
