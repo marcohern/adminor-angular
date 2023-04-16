@@ -1,0 +1,30 @@
+<div class="card">
+  <div class="card-header border-bottom">
+    <h5 class="card-title">{{title}}</h5>
+  </div>
+  <div class="card-body">
+    <div *ngFor="let aggregate of aggregates">
+      <div class="activity">
+        <div class="timeline-section {{aggregate.background}}">
+          <i class="bx {{aggregate.icon}}"></i>
+        </div>
+        <div class="time-activity">
+          <div class="item-activity">
+            <div class="d-flex">
+              <div class="mt-1">
+                <h5 class="mb-0">{{aggregate.title}}</h5>
+                <span class="mb-0 text-muted">{{aggregate.description}}</span>
+              </div>
+              <div class="ms-auto">
+                <h4 class="font-weight-semibold label-medium-size mt-2 mb-0 {{aggregate.textcolor}} me-2">
+                  $ {{aggregate.amount|number}}
+                </h4>
+                <span class="mb-0 tx-12 text-muted">{{aggregate.delta}}% {{aggregate.direction}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -17,6 +17,7 @@ import { UpdateEmailComponent } from './users/update-email/update-email.componen
 import { CounterComponent } from './shared/counter/counter.component';
 import { CurveChartComponent } from './shared/curve-chart/curve-chart.component';
 import { TasksComponent } from './shared/tasks/tasks.component';
+import { SalesSummaryComponent } from './shared/sales-summary/sales-summary.component';
 
 
 
@@ -28,7 +29,8 @@ import { TasksComponent } from './shared/tasks/tasks.component';
     UpdateEmailComponent,
     CounterComponent,
     CurveChartComponent,
-    TasksComponent
+    TasksComponent,
+    SalesSummaryComponent
   ],
   imports: [
     CommonModule,
@@ -47,7 +49,8 @@ import { TasksComponent } from './shared/tasks/tasks.component';
   exports:[
     CounterComponent,
     CurveChartComponent,
-    TasksComponent
+    TasksComponent,
+    SalesSummaryComponent
   ],
 })
 export class MarcohernModule { }
