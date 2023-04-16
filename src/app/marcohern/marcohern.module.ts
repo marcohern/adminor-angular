@@ -3,9 +3,10 @@ import { CommonModule } from '@angular/common';
 import { MarcohernRoutingModule } from './marcohern-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { NgChartsModule } from 'ng2-charts';
-import { NgSelectModule } from '@ng-select/ng-select';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgChartsModule } from 'ng2-charts';
+import { NgCircleProgressModule } from 'ng-circle-progress';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 import { Counter1Component } from './shared/counters/counter1/counter1.component';
 import { Counter2Component } from './shared/counters/counter2/counter2.component';
@@ -20,6 +21,7 @@ import { TransactionsComponent } from './shared/transactions/transactions.compon
 import { UpdatePasswordComponent } from './users/update-password/update-password.component';
 import { UpdateEmailComponent } from './users/update-email/update-email.component';
 import { WeatherComponent } from './shared/weather/weather.component';
+import { Counter3Component } from './shared/counters/counter3/counter3.component';
 
 
 
@@ -28,6 +30,7 @@ import { WeatherComponent } from './shared/weather/weather.component';
     CurveChartComponent,
     Counter1Component,
     Counter2Component,
+    Counter3Component,
     InvoicesComponent,
     MyProfileComponent,
     QueryUsersComponent,
@@ -47,12 +50,14 @@ import { WeatherComponent } from './shared/weather/weather.component';
     NgSelectModule,
     MarcohernRoutingModule,
     NgChartsModule,
-    NgbModule
+    NgbModule,
+    NgCircleProgressModule.forRoot()
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   exports:[
     Counter1Component,
     Counter2Component,
+    Counter3Component,
     CurveChartComponent,
     TasksComponent,
     SalesSummaryComponent,
