@@ -10,18 +10,18 @@ import { NgApexchartsModule } from 'ng-apexcharts';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
-import { QueryUsersComponent } from './users/query-users/query-users.component';
-import { MyProfileComponent } from './users/my-profile/my-profile.component';
-import { UpdatePasswordComponent } from './users/update-password/update-password.component';
-import { UpdateEmailComponent } from './users/update-email/update-email.component';
-import { CounterComponent } from './shared/counter/counter.component';
+import { CounterComponent } from './shared/counters/counter/counter.component';
 import { CurveChartComponent } from './shared/curve-chart/curve-chart.component';
-import { TasksComponent } from './shared/tasks/tasks.component';
+import { InvoicesComponent } from './shared/invoices/invoices.component';
+import { MyProfileComponent } from './users/my-profile/my-profile.component';
+import { QueryUsersComponent } from './users/query-users/query-users.component';
 import { SalesSummaryComponent } from './shared/sales-summary/sales-summary.component';
 import { TasksAssignedComponent } from './shared/tasks-assigned/tasks-assigned.component';
+import { TasksComponent } from './shared/tasks/tasks.component';
 import { TransactionsComponent } from './shared/transactions/transactions.component';
+import { UpdatePasswordComponent } from './users/update-password/update-password.component';
+import { UpdateEmailComponent } from './users/update-email/update-email.component';
 import { WeatherComponent } from './shared/weather/weather.component';
-import { InvoicesComponent } from './shared/invoices/invoices.component';
 
 
 
