@@ -1,0 +1,46 @@
+<div class="card">
+  <div>
+    <div class="weather-card one">
+      <div class="top">
+        <div class="wrapper">
+          <div class="mynav">
+            <a href="javascript:void(0)"
+              ><span class="fe fe-chevron-left p-2"></span
+            ></a>
+            <a href="javascript:void(0)"
+              ><span class="fe fe-settings p-2"></span
+            ></a>
+          </div>
+          <h2 class="text-white mt-4">{{title}}</h2>
+          <p class="temp mb-0">
+            <span class="bx bx-cloud-light-rain tx-50 text-white"></span>
+            <span class="temp-value">{{temp}}</span>
+            <span class="deg">0</span>
+            <a href="javascript:void(0)">
+              <span class="temp-type">C</span>
+            </a>
+          </p>
+          <p class="tx-18 text-white mb-2">{{description}}</p>
+        </div>
+      </div>
+      <div class="bottom">
+        <a href="javascript:void(0);"
+          ><i class="fe fe-chevron-up uparrow"></i
+        ></a>
+        <div class="wrapper">
+          <ul class="forecast">
+            <li *ngFor="let condition of conditions" class="active">
+              <span class="date">{{condition.title}}</span>
+              <span class="fe {{condition.icon}} condition me-2">
+                <span class="temp">{{condition.temp}}
+                  <span class="deg">0</span>
+                  <span class="temp-type">C</span>
+                </span>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

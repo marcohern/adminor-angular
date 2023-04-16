@@ -42,70 +42,7 @@
 
   <div class="row row-cards">
     <div class="col-md-12 col-lg-12 col-xl-3">
-      <div class="card">
-        <div>
-          <div class="weather-card one">
-            <div class="top">
-              <div class="wrapper">
-                <div class="mynav">
-                  <a href="javascript:void(0)"
-                    ><span class="fe fe-chevron-left p-2"></span
-                  ></a>
-                  <a href="javascript:void(0)"
-                    ><span class="fe fe-settings p-2"></span
-                  ></a>
-                </div>
-                <h2 class="text-white mt-4">Today</h2>
-                <p class="temp mb-0">
-                  <span class="bx bx-cloud-light-rain tx-50 text-white"></span>
-                  <span class="temp-value">27</span>
-                  <span class="deg">0</span>
-                  <a href="javascript:void(0)"
-                    ><span class="temp-type">C</span></a
-                  >
-                </p>
-                <p class="tx-18 text-white mb-2">Partly cloudy</p>
-              </div>
-            </div>
-            <div class="bottom">
-              <a href="javascript:void(0);"
-                ><i class="fe fe-chevron-up uparrow"></i
-              ></a>
-              <div class="wrapper">
-                <ul class="forecast">
-                  <li class="active">
-                    <span class="date">Sunny</span>
-                    <span class="fe fe-sun condition me-2">
-                      <span class="temp"
-                        >28<span class="deg">0</span
-                        ><span class="temp-type">C</span></span
-                      >
-                    </span>
-                  </li>
-                  <li class="active">
-                    <span class="date">Wind</span>
-                    <span class="fe fe-cloud condition me-2">
-                      <span class="temp"
-                        >73<span class="deg">0</span
-                        ><span class="temp-type">C</span></span
-                      >
-                    </span>
-                  </li>
-                  <li class="active">
-                    <span class="date">Rain</span> 
-                    <span class="fe fe-cloud-rain condition me-2">
-                      <span class="temp"
-                        >32<span class="deg">0</span
-                        ><span class="temp-type">C</span></span
-                      >
-                    </span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <marcohern-weather title="Today" description="Partly Cloudy" [temp]="28"></marcohern-weather>
     </div>
     <div class="col-lg-12 col-md-12 col-xl-9">
       <div class="card">
