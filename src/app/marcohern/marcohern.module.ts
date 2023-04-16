@@ -19,6 +19,7 @@ import { CurveChartComponent } from './shared/curve-chart/curve-chart.component'
 import { TasksComponent } from './shared/tasks/tasks.component';
 import { SalesSummaryComponent } from './shared/sales-summary/sales-summary.component';
 import { TasksAssignedComponent } from './shared/tasks-assigned/tasks-assigned.component';
+import { TransactionsComponent } from './shared/transactions/transactions.component';
 
 
 
@@ -32,7 +33,8 @@ import { TasksAssignedComponent } from './shared/tasks-assigned/tasks-assigned.c
     CurveChartComponent,
     TasksComponent,
     SalesSummaryComponent,
-    TasksAssignedComponent
+    TasksAssignedComponent,
+    TransactionsComponent
   ],
   imports: [
     CommonModule,
@@ -53,7 +55,8 @@ import { TasksAssignedComponent } from './shared/tasks-assigned/tasks-assigned.c
     CurveChartComponent,
     TasksComponent,
     SalesSummaryComponent,
-    TasksAssignedComponent
+    TasksAssignedComponent,
+    TransactionsComponent
   ],
 })
 export class MarcohernModule { }
