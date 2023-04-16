@@ -9,26 +9,10 @@ const routes: Routes = [
   {
     path: '',
     children: [
-      {
-        path: 'me',
-        title: 'My Profile',
-        component: MyProfileComponent,
-      },
-      {
-        path: 'users',
-        title: 'Query Users',
-        component: QueryUsersComponent,
-      },
-      {
-        path: 'update-email',
-        title: 'Update Email',
-        component: UpdateEmailComponent,
-      },
-      {
-        path: 'update-password',
-        title: 'Update Password',
-        component: UpdatePasswordComponent,
-      },
+      { path: 'me'             , title: 'My Profile'     , component: MyProfileComponent     , },
+      { path: 'users'          , title: 'Query Users'    , component: QueryUsersComponent    , },
+      { path: 'update-email'   , title: 'Update Email'   , component: UpdateEmailComponent   , },
+      { path: 'update-password', title: 'Update Password', component: UpdatePasswordComponent, },
     ],
   },
 ];
