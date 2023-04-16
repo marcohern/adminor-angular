@@ -22,6 +22,7 @@ import { TransactionsComponent } from './shared/transactions/transactions.compon
 import { UpdatePasswordComponent } from './users/update-password/update-password.component';
 import { UpdateEmailComponent } from './users/update-email/update-email.component';
 import { WeatherComponent } from './shared/weather/weather.component';
+import { Counter1Component } from './shared/counters/counter1/counter1.component';
 
 
 
@@ -32,6 +33,7 @@ import { WeatherComponent } from './shared/weather/weather.component';
     UpdatePasswordComponent,
     UpdateEmailComponent,
     CounterComponent,
+    Counter1Component,
     CurveChartComponent,
     TasksComponent,
     SalesSummaryComponent,
@@ -56,6 +58,7 @@ import { WeatherComponent } from './shared/weather/weather.component';
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   exports:[
     CounterComponent,
+    Counter1Component,
     CurveChartComponent,
     TasksComponent,
     SalesSummaryComponent,
