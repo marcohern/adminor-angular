@@ -10,6 +10,7 @@ export class GeneralInfoForm {
   public subtitle:string = '';
   public logo:string = '';
   public logoBw:string = '';
+  public disableTitle:boolean = true;
 
   updateTitle(event:Event) {
     console.log("updateTitle", this.title);
