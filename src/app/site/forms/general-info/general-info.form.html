@@ -1,8 +1,31 @@
-<form>
+<form method="POST" enctype="multipart/form-data" (ngSubmit)="submit()">
   <div class="row row-sm mg-t-20">
     <div class="col-lg">
       <label for="title">Title</label>
-      <input type="text" name="title" class="form-control" placeholder="eg: My Super Cool Website" />
+      <input type="text" name="title" class="form-control" [(ngModel)]="title" (change)="updateTitle($event)" placeholder="eg: My Super Cool Website" />
+    </div>
+  </div>
+  <div class="row row-sm mg-t-20">
+    <div class="col-lg">
+      <label for="subtitle">Subtitle</label>
+      <input type="text" name="subtitle" class="form-control" [(ngModel)]="subtitle" (change)="updateSubtitle($event)" placeholder="eg: The Cooles Website in the world" />
+    </div>
+  </div>
+  <div class="row row-sm mg-t-20">
+    <div class="col-lg">
+      <label for="logo">Logo</label>
+      <input type="file" name="logo" class="form-control" [(ngModel)]="logo" (change)="updateLogo($event)" />
+    </div>
+  </div>
+  <div class="row row-sm mg-t-20">
+    <div class="col-lg">
+      <label for="logo-bw">Logo (Black & White/High Contrast)</label>
+      <input type="file" name="logo-bw" class="form-control" [(ngModel)]="logoBw" (change)="updateLogoBw($event)" />
+    </div>
+  </div>
+  <div class="row row-sm mg-t-20">
+    <div class="col-lg">
+      <button type="submit" class="btn btn-primary">Submit</button>
     </div>
   </div>
 </form>
