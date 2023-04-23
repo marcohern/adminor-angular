@@ -60,17 +60,23 @@ export class NavService {
 
   MENUITEMS: Menu[] = [
     {
-      title: 'Users',
-      selected: false,
-      icon: 'user',
-      type: 'sub',
-      Menusub: true,
-      active: false,
+      title: 'Users', selected: false, icon: 'user', type: 'sub', Menusub: true, active: false,
       children: [
         { title: 'Query Users', path: '/users/users', type: 'link', selected: false, },
         { title: 'My Profile', path: '/users/me', type: 'link', selected: false, },
         { title: 'Update Password', path: '/users/update-password', type: 'link', selected: false, },
         { title: 'Update Email', path: '/users/update-email', type: 'link', selected: false, },
+      ]
+    },
+    {
+      title: 'Site', selected: false, icon: 'user', type: 'sub', Menusub: true, active: false,
+      children: [
+        { title: 'General Information', path: '/site/general', type: 'link', selected: false, },
+        { title: 'Home Page' , path: '/site/main'      , type: 'link', selected: false, },
+        { title: 'Pages'     , path: '/site/pages'     , type: 'link', selected: false, },
+        { title: 'Carousels' , path: '/site/carousel'  , type: 'link', selected: false, },
+        { title: 'Categories', path: '/site/categories', type: 'link', selected: false, },
+        { title: 'Items'     , path: '/site/items'     , type: 'link', selected: false, },
       ]
     },
     {
