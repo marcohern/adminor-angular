@@ -841,12 +841,9 @@
                   routerLink="/pages/profile"
                   ><i class="fe fe-settings"></i> Account Settings</a
                 >
-                <a
-                  ngbDropdownItem
-                  class="dropdown-item"
-                  routerLink="/custompages/login"
-                  ><i class="fe fe-log-out"></i> Sign Out</a
-                >
+                <a ngbDropdownItem class="dropdown-item" (click)="logout()">
+                  <i class="fe fe-log-out"></i> Sign Out
+                </a>
               </div>
             </div>
           </div>

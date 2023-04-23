@@ -4,6 +4,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { LayoutService } from '../../services/layout.service';
 import { Menu, NavService } from 'src/app/shared/services/nav.service';
 import { SwitcherService } from 'src/app/shared/services/switcher.service';
+import { OauthService } from '../../services/oauth.service';
 
 @Component({
   selector: 'app-header',
@@ -19,7 +20,8 @@ export class HeaderComponent implements OnInit {
     public navServices: NavService,
     public modalService: NgbModal,
     public SwitcherService: SwitcherService,
-    public router: Router
+    public router: Router,
+    private oauth: OauthService,
   ) {
    
   }
@@ -40,8 +42,11 @@ export class HeaderComponent implements OnInit {
     this.SwitcherService.emitChange(true);
     document.querySelector('body')?.classList.remove('sidenav-toggled-open');
   }
-
   
+  logout() {
+    this.oauth.unauthorize();
+    this.router.navigate(['/auth/login']);
+  }
 
   
 }

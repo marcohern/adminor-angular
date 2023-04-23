@@ -791,9 +791,9 @@
                 <a ngbDropdownItem class="dropdown-item" href="profile.html"
                   ><i class="fe fe-settings"></i> Account Settings</a
                 >
-                <a ngbDropdownItem class="dropdown-item" href="Login.html"
-                  ><i class="fe fe-log-out"></i> Sign Out</a
-                >
+                <a ngbDropdownItem class="dropdown-item" (click)="logout()">
+                  <i class="fe fe-log-out"></i> Sign Out
+                </a>
               </div>
             </div>
           </div>

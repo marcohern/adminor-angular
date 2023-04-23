@@ -7,6 +7,11 @@ export const content: Routes = [
       import('src/app/marcohern/marcohern.module').then((m) => m.MarcohernModule),
   },
   {
+    path: 'site',
+    loadChildren: () =>
+      import('src/app/site/site.module').then((m) => m.SiteModule),
+  },
+  {
     path: 'dashboard',
     loadChildren: () =>
       import('src/app/component/dashboard/dashboard.module').then(
