@@ -71,12 +71,13 @@ export class NavService {
     {
       title: 'Site', selected: false, icon: 'user', type: 'sub', Menusub: true, active: false,
       children: [
-        { title: 'General Information', path: '/site/general', type: 'link', selected: false, },
-        { title: 'Home Page' , path: '/site/main'      , type: 'link', selected: false, },
-        { title: 'Pages'     , path: '/site/pages'     , type: 'link', selected: false, },
-        { title: 'Carousels' , path: '/site/carousel'  , type: 'link', selected: false, },
-        { title: 'Categories', path: '/site/categories', type: 'link', selected: false, },
-        { title: 'Items'     , path: '/site/items'     , type: 'link', selected: false, },
+        { title: 'General Information', path: '/site/general'   , type: 'link', selected: false, },
+        { title: 'Home Page'          , path: '/site/main'      , type: 'link', selected: false, },
+        { title: 'Pages'              , path: '/site/pages'     , type: 'link', selected: false, },
+        { title: 'Carousels'          , path: '/site/carousel'  , type: 'link', selected: false, },
+        { title: 'Categories'         , path: '/site/categories', type: 'link', selected: false, },
+        { title: 'Labels'             , path: '/site/labels'    , type: 'link', selected: false, },
+        { title: 'Items'              , path: '/site/items'     , type: 'link', selected: false, },
       ]
     },
     {
