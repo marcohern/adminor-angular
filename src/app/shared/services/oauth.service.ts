@@ -94,6 +94,7 @@ export class OauthService {
   unauthorize() {
     this.authorization = undefined;
     this.user = undefined;
+    this.store.clear();
   }
 
   isAuthorized():boolean {
