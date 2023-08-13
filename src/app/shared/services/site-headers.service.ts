@@ -18,7 +18,7 @@ export class SiteHeadersService {
 
   public read()
   {
-    this.http.get<SiteHeaders>(
+    return this.http.get<SiteHeaders>(
       `${environment.prefix}/api/headers`,
       { headers:this.oauth.headers }
     );
@@ -26,7 +26,7 @@ export class SiteHeadersService {
 
   public write(headers:SiteHeaders)
   {
-    this.http.post(
+    return this.http.post(
       `${environment.prefix}/api/headers`,
       headers,
       { headers:this.oauth.headers }

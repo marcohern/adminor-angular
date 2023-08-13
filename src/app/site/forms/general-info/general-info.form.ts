@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { SiteHeaders } from 'src/app/shared/models/site-headers';
 
 @Component({
   selector: 'site-general-info-form',
@@ -11,6 +12,23 @@ export class GeneralInfoForm {
   public logo:string = '';
   public logoBw:string = '';
   public disableTitle:boolean = true;
+
+  @Input()
+  public siteHeaders:SiteHeaders = new SiteHeaders();
+
+  public constructor()
+  {
+  }
+
+  ngOnInit() {
+    console.log("GeneralInfoForm.ngOnInit", this.siteHeaders);
+  }
+
+  ngOnChanges() {
+    console.log("GeneralInfoForm.ngOnChanges", this.siteHeaders);
+    this.title = this.siteHeaders.title;
+    this.subtitle = this.siteHeaders.subtitle;
+  }
 
   updateTitle(event:Event) {
     console.log("updateTitle", this.title);
