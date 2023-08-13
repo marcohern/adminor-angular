@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { SiteHeaders } from 'src/app/shared/models/site-headers';
+import { SiteHeadersService } from 'src/app/shared/services/site-headers.service';
 
 @Component({
   selector: 'site-general-info-form',
@@ -16,7 +17,9 @@ export class GeneralInfoForm {
   @Input()
   public siteHeaders:SiteHeaders = new SiteHeaders();
 
-  public constructor()
+  public constructor(
+    private siteHeadersService:SiteHeadersService
+  )
   {
   }
 
@@ -49,12 +52,8 @@ export class GeneralInfoForm {
   }
 
   submit() {
-    let data = {
-      title: this.title,
-      subtitle: this.subtitle,
-      logo: this.logo,
-      logoBw: this.logoBw
-    };
-    console.log("submit", data);
+    this.siteHeaders.title = this.title;
+    this.siteHeaders.subtitle = this.subtitle;
+    this.siteHeadersService.write(this.siteHeaders);
   }
 }
