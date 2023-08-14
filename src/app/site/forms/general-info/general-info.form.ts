@@ -12,43 +12,44 @@ export class GeneralInfoForm {
   public subtitle:string = '';
   public logo:string = '';
   public logoBw:string = '';
-  public disableTitle:boolean = true;
+  public disable:boolean = false;
 
   @Input()
   public siteHeaders:SiteHeaders = new SiteHeaders();
 
   public constructor(
     private siteHeadersService:SiteHeadersService
-  )
-  {
+  ) {
   }
 
   ngOnInit() {
-    console.log("GeneralInfoForm.ngOnInit", this.siteHeaders);
+    console.debug("GeneralInfoForm.ngOnInit", this.siteHeaders);
   }
 
   ngOnChanges() {
-    console.log("GeneralInfoForm.ngOnChanges", this.siteHeaders);
+    console.debug("GeneralInfoForm.ngOnChanges", this.siteHeaders);
     this.title = this.siteHeaders.title;
     this.subtitle = this.siteHeaders.subtitle;
+    //this.logo = this.siteHeaders.logoUrl;
+    //this.logoBw = this.siteHeaders.logoBwUrl;
   }
 
   updateTitle(event:Event) {
-    console.log("updateTitle", this.title);
+    console.debug("GeneralInfoForm.updateTitle", this.title);
   }
 
   updateSubtitle(event:Event) {
-    console.log("updateSubtitle", this.subtitle);
+    console.debug("GeneralInfoForm.updateSubtitle", this.subtitle);
   }
 
   updateLogo(event:Event) {
     const target = event.currentTarget as HTMLInputElement;
-    console.log("updateLogo", target.files);
+    console.log("GeneralInfoForm.updateLogo", event, target.files);
   }
 
   updateLogoBw(event:Event) {
     const target = event.currentTarget as HTMLInputElement;
-    console.log("updateLogoBw", event, target.files);
+    console.log("GeneralInfoForm.updateLogoBw", event, target.files);
   }
 
   submit() {
